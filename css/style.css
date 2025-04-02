@@ -263,6 +263,70 @@ html {
    line-height: 150%;
 }
 
+.start__img {
+   width: 66px;
+}
+.button__img {
+   width: 86px;
+}
+
+.console__start .start__pressed {
+   display: none;
+}
+
+.console__start._active .start__pressed {
+   width: 66px;
+   display: block;
+}
+
+.console__start._active .start__img {
+   display: none;
+}
+
+.console__start .button__pressed {
+   display: none;
+}
+
+.console__start._active .button__pressed {
+   width: 86px;
+   display: block;
+}
+
+.console__start._active .button__img {
+   display: none;
+}
+
+.dpad .right__pressed,
+.dpad .left__pressed,
+.dpad .right_bg__pressed,
+.dpad .left_bg__pressed {
+   display: none;
+}
+
+.dpad._prev .left_bg__pressed,
+.dpad._prev .left__pressed {
+   display: block;
+}
+
+.dpad._prev .left-arrow,
+.dpad._prev .right__pressed,
+.dpad._prev .dpad__bg,
+.dpad._prev .right_bg__pressed {
+   display: none;
+}
+
+.dpad._next .right_bg__pressed,
+.dpad._next .right__pressed {
+   display: block;
+}
+
+.dpad._next .right-arrow,
+.dpad._next .left__pressed,
+.dpad._next .dpad__bg,
+.dpad._next .left_bg__pressed {
+   display: none;
+}
+
 .dpad__button {
    position: absolute;
    top: 50%;
