@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "Marvin";
+  src: url("../fonts/Marvin-Round.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SFPRODISPLAYBLACKITALIC.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SFPRODISPLAYBOLD.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SFPRODISPLAYHEAVYITALIC.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SFPRODISPLAYLIGHTITALIC.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SFPRODISPLAYMEDIUM.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SFPRODISPLAYREGULAR.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SFPRODISPLAYSEMIBOLDITALIC.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SFPRODISPLAYTHINITALIC.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("../fonts/SFPRODISPLAYULTRALIGHTITALIC.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+:root {
+  --white50: rgba(255, 255, 255, 0.5);
+
+  --blue50: rgba(0, 46, 119, 0.5);
+  --blue30: rgba(0, 46, 119, 0.3);
+
+  --silver: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  font-family: "Marvin", sans-serif;
+}
+/* Texts */
+.title {
+  color: #fff;
+  font-family: "Marvin";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.subtitle {
+  color: #fff;
+  font-family: "Marvin";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.text {
+  color: #fff;
+  font-family: "SF Pro Rounded";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 42px;
+  }
+}
+
+.text__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.text__item ul {
+  padding-left: 12px;
+}
+
+.text__item ul li {
+  list-style: disc;
+  color: #fff;
+  font-family: "SF Pro Rounded";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.texts__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 100px !important;
+}
+
+@media (max-width: 767px) {
+  .texts__wrapper {
+    padding-bottom: 80px !important;
+  }
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.email__wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.email__wrap a {
+  border-radius: 100px;
+  border: 1px solid var(--silver);
+  background: var(--blue50);
+  padding: 4px 10px;
+  color: #fff;
+  font-family: "SF Pro Rounded";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* --------- */
+
+.page {
+  padding-top: 175px;
+}
+
+.simple-page {
+  background: radial-gradient(
+      138.18% 61.41% at 51.64% 95.39%,
+      #3ee4fe 0%,
+      #0651c6 100%
+    ),
+    #fff;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 54px;
+}
+
+@media (max-width: 767px) {
+  .breadcrumbs {
+    margin-bottom: 32px;
+  }
+
+  .page {
+    padding-top: 145px;
+  }
+}
+
+.breadcrumbs__item {
+  color: var(--white50);
+  text-align: center;
+  font-family: "SF Pro Rounded";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.breadcrumbs__item._active {
+  color: #fff;
+}
+
+.breadcrumbs__arrow {
+  width: 7px;
+  object-fit: contain;
+}
+
+.show-1150 {
+  display: none !important;
+}
+
+@media (max-width: 1150px) {
+  .show-1150 {
+    display: flex !important;
+  }
+
+  .hide-1150 {
+    display: none !important;
+  }
+}
