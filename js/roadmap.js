@@ -6,6 +6,7 @@ const itemStatus = {
   dropped: "dropped",
 };
 
+/* Attributes */
 function setAddedItems() {
   if (addedItems >= 4) return;
 
@@ -15,11 +16,13 @@ function setAddedItems() {
   const activeProgress = document.querySelector(
     ".roadmap__head_progress--active",
   );
-  if (addedItems === 0) {
-    activeProgress.style.width = activeProgress.dataset.minWidth;
-  } else {
-    activeProgress.style.width = `${addedItems * 25}%`;
-  }
+
+  let progressWidth =
+    addedItems == 0 ? activeProgress.dataset.minWidth : `${addedItems * 25}%`;
+  document.documentElement.style.setProperty(
+    "--active-progress-width",
+    `${progressWidth}`,
+  );
 }
 
 function getItemStatus(item) {
@@ -40,6 +43,9 @@ function addAttributes() {
   });
 }
 
+/*
+ * Drag and drop
+ */
 function dragMoveListener(event) {
   var target = event.target;
   var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
@@ -54,7 +60,7 @@ function initInteract() {
     inertia: true,
     modifiers: [
       interact.modifiers.restrict({
-        restriction: ".roadmap__content",
+        restriction: ".roadmap ._container",
         endOnly: true,
       }),
     ],
@@ -78,20 +84,83 @@ function initInteract() {
       const itemElement = event.relatedTarget;
       const itemId = itemElement.dataset.itemId;
 
-      dropZone.setAttribute("data-status", "dropped");
-      roadmap.classList.add(`_added_section_${itemId}`);
-
       console.log(`Элемент ${itemId} помещен в ячейку ${storageId}`);
 
       if (itemId === storageId) {
+        dropZone.setAttribute("data-status", "dropped");
+        roadmap.classList.add(`_added_section_${itemId}`);
+        dropZone.classList.add("_active");
+
         setAddedItems();
         interact(itemElement).draggable(false);
         itemElement.setAttribute("data-status", itemStatus.dropped);
         itemElement.classList.add("_added");
+        openRoadmapText(itemId);
       }
     },
   });
 }
 
-addAttributes();
-initInteract();
+/*
+ * Open roadmap text
+ */
+const roadmapTexts = document.querySelectorAll("[data-roadmap-text]");
+const roadmapWrap = document.querySelector(".roadmap__wrap");
+const draggableWrap = document.querySelector(".roadmap__drageble");
+const roadmapItems = document.querySelectorAll(".roadmap__item");
+const storageImages = document.querySelectorAll("[data-staroge-image]");
+
+function initCloseRoadmapTexts() {
+  const roadmapClose = document.querySelectorAll(".roadmap__cross");
+  roadmapClose.forEach((close) => {
+    close.addEventListener("click", () => {
+      roadmapTexts.forEach((item) => {
+        item.classList.add("_hide");
+      });
+      console.log("close");
+
+      draggableWrap.classList.remove("_hide_anim");
+      draggableWrap.classList.remove("_anim");
+
+      roadmapItems.forEach((item) => {
+        item.classList.remove("_hide_item");
+      });
+    });
+  });
+}
+
+function openRoadmapText(itemId) {
+  draggableWrap.classList.add("_anim");
+  draggableWrap.classList.add("_anim");
+
+  roadmapItems.forEach((item) => {
+    item.classList.add("_hide_item");
+  });
+
+  setTimeout(() => {
+    draggableWrap.classList.add("_hide_anim");
+    const roadmapText = document.querySelector(
+      `[data-roadmap-text="${itemId}"]`,
+    );
+    roadmapText.classList.remove("_hide");
+  }, 1000);
+}
+
+function initClickRoadmapItems() {
+  storageImages.forEach((item) => {
+    item.addEventListener("click", () => {
+      console.log("click");
+      const itemId = item.dataset.starogeImage;
+      openRoadmapText(itemId);
+    });
+  });
+}
+
+function initRoadmap() {
+  addAttributes();
+  initInteract();
+  initCloseRoadmapTexts();
+  initClickRoadmapItems();
+}
+
+initRoadmap();
