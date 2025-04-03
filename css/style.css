@@ -4,6 +4,7 @@
 @import "./header/burger.css";
 @import "./header/sub-list.css";
 @import "./footer.css";
+@import "./roadmap.css";
 
 * {
    color: #fff;
