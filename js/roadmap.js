@@ -45,7 +45,7 @@ function addAttributes() {
 
 /*
  * Drag and drop
- */
+*/
 function dragMoveListener(event) {
   var target = event.target;
   var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
@@ -115,20 +115,26 @@ function initCloseRoadmapTexts() {
   roadmapClose.forEach((close) => {
     close.addEventListener("click", () => {
       roadmapTexts.forEach((item) => {
-        item.classList.add("_hide");
+        item.style.opacity = "0";
       });
-
-      draggableWrap.classList.add("_show_anim");
-      draggableWrap.classList.remove("_hide_anim");
-      draggableWrap.classList.remove("_anim");
 
       setTimeout(() => {
-        draggableWrap.classList.remove("_show_anim");
-      }, 1000);
+        roadmapTexts.forEach((item) => {
+          item.style.opacity = "1";
+          item.classList.add("_hide");
+        });
 
-      roadmapItems.forEach((item) => {
-        item.classList.remove("_hide_item");
-      });
+        draggableWrap.classList.add("_show_anim");
+        draggableWrap.classList.remove("_hide_anim");
+        draggableWrap.classList.remove("_anim");
+
+        setTimeout(() => {
+          draggableWrap.classList.remove("_show_anim");
+          roadmapItems.forEach((item) => {
+            item.classList.remove("_hide_item");
+          });
+        }, 1000);
+      }, 500);
     });
   });
 }
@@ -167,6 +173,6 @@ function initRoadmap() {
   initClickRoadmapItems();
 }
 
-// openRoadmapText(1);
+openRoadmapText(1);
 
 initRoadmap();

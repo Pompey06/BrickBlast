@@ -285,6 +285,10 @@
   }
 }
 
+[data-roadmap-text] {
+  transition: opacity 0.5s ease;
+}
+
 .roadmap__drageble._show_anim {
   animation: animShowText 1s ease-in-out forwards;
   animation-iteration-count: 1;
@@ -333,6 +337,10 @@
     --roadmap-item-size: 150px;
   }
 
+  .roadmap__head_progress {
+    transform: rotate(90deg);
+    margin: 70px auto;
+  }
   .roadmap__drageble {
     flex-direction: column;
     align-items: center;
