@@ -117,10 +117,14 @@ function initCloseRoadmapTexts() {
       roadmapTexts.forEach((item) => {
         item.classList.add("_hide");
       });
-      console.log("close");
 
+      draggableWrap.classList.add("_show_anim");
       draggableWrap.classList.remove("_hide_anim");
       draggableWrap.classList.remove("_anim");
+
+      setTimeout(() => {
+        draggableWrap.classList.remove("_show_anim");
+      }, 1000);
 
       roadmapItems.forEach((item) => {
         item.classList.remove("_hide_item");
@@ -162,5 +166,7 @@ function initRoadmap() {
   initCloseRoadmapTexts();
   initClickRoadmapItems();
 }
+
+openRoadmapText(1);
 
 initRoadmap();
