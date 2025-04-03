@@ -167,6 +167,6 @@ function initRoadmap() {
   initClickRoadmapItems();
 }
 
-openRoadmapText(1);
+// openRoadmapText(1);
 
 initRoadmap();
