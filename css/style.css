@@ -375,7 +375,7 @@ html {
 #partners-physics {
   width: 100%;
   margin-top: 150px;
-  /* pointer-events: none; */
+  pointer-events: none;
 }
 
 .partners__title {

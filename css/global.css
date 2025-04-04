@@ -178,7 +178,16 @@ body {
 
 .simple-page {
   background: radial-gradient(
-      138.18% 61.41% at 51.64% 95.39%,
+      87.55% 38.91% at 51.64% 51.27%,
+      #3ee4fe 0%,
+      #0651c6 100%
+    ),
+    #fff;
+}
+
+.text--page {
+  background: radial-gradient(
+      186.82% 83.03% at 51.64% 95.39%,
       #3ee4fe 0%,
       #0651c6 100%
     ),

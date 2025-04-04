@@ -140,7 +140,6 @@ let arc = createArcBody(
 World.add(world, arc);
 
 
-
 // При ресайзе пересоздаем дугу
 window.addEventListener("resize", () => {
   const newWidth = window.innerWidth;
