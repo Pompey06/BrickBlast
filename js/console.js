@@ -207,9 +207,6 @@ window.addEventListener("scroll", function () {
    }
 });
 
-const path = document.querySelector(".arrow-animation path");
-console.log(path.getTotalLength());
-
 let backgroundRevealed = false;
 
 function revealBackgroundElements() {

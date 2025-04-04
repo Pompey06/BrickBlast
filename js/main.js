@@ -13,17 +13,33 @@ window.addEventListener("scroll", function () {
       }
    });
 
+   // Обработка .crystal
    document.querySelectorAll(".crystal").forEach((crystal) => {
       let factor = crystal.getAttribute("data-parallax-factor");
       factor = factor ? parseFloat(factor) : 0.2;
       const partners = document.querySelector(".partners");
-      //console.log(partners, partners.offsetTop);
       const partnersOffset = partners.offsetTop * 0.5;
       let parallaxOffset = (scrollOffset - partnersOffset) * factor;
       parallaxOffset = parallaxOffset > 0 ? parallaxOffset : 0;
 
       if (scrollOffset - partners.offsetTop < -300) crystal.style.transform = `translateY(${parallaxOffset}px)`;
    });
+
+   // Обработка дополнительных элементов с параллаксом
+   // Обработка дополнительных элементов с параллаксом + стартовое смещение вверх на 300px
+   document
+      .querySelectorAll(
+         ".coin1, .coin2, .blue, .green, .purple, .yellow, .blue_circle, .green_circle, .purple_circle, .yellow_circle"
+      )
+      .forEach((el) => {
+         let factor = el.getAttribute("data-parallax-factor");
+         factor = factor ? parseFloat(factor) : 0.2;
+
+         const parallaxOffset = scrollOffset * factor;
+
+         // Смещаем вверх на 300px изначально
+         el.style.transform = `translateY(${parallaxOffset - 300}px)`;
+      });
 });
 
 const Engine = Matter.Engine,

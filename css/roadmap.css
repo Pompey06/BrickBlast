@@ -29,6 +29,7 @@
    width: var(--roadmap-content-width);
    height: var(--roadmap-content-height);
    margin: 0 auto;
+   z-index: 10;
 }
 
 .roadmap__title {
@@ -229,12 +230,79 @@
    display: none;
 }
 
+.arrow {
+   position: absolute;
+   bottom: 10%;
+   left: 0;
+}
+
+.roadmap .blue {
+   position: absolute;
+   top: 45%;
+   left: 5%;
+}
+
+.roadmap .green {
+   position: absolute;
+   top: 67%;
+   left: 27%;
+}
+
+.roadmap .purple {
+   position: absolute;
+   top: 45%;
+   left: 87%;
+}
+
+.roadmap .yellow {
+   position: absolute;
+   top: 67%;
+   left: 68%;
+}
+
+.blue_circle {
+   position: absolute;
+   top: 75%;
+   left: 92%;
+}
+
+.green_circle {
+   position: absolute;
+   top: 67%;
+   left: 87%;
+}
+
+.purple_circle {
+   position: absolute;
+   top: 75%;
+   left: 6%;
+}
+
+.yellow_circle {
+   position: absolute;
+   top: 65%;
+   left: 8%;
+}
+
+.coin1 {
+   position: absolute;
+   top: 3%;
+   left: 6%;
+}
+
+.coin2 {
+   position: absolute;
+   top: -5%;
+   right: 7%;
+}
+
 .roadmap__head {
    display: flex;
    align-items: center;
    justify-content: center;
    gap: 12px;
    margin: 10px auto;
+   margin-bottom: 0;
 }
 
 .roadmap__head_progress {
@@ -286,6 +354,18 @@
    animation-iteration-count: 1;
 }
 
+[data-added-items="4"] .roadmap__head_progress,
+[data-added-items="4"] .roadmap__idea,
+[data-added-items="4"] .drag {
+   display: none;
+}
+
+[data-added-items="4"] .roadmap__king {
+   box-shadow: 0 0 12px rgba(62, 228, 254, 0.4), 0 0 24px rgba(62, 228, 254, 0.3), 0 0 36px rgba(6, 81, 198, 0.2);
+   transition: box-shadow 0.4s ease, transform 0.4s ease;
+   transform: translateY(-2px) scale(1.01);
+}
+
 @keyframes animShowText {
    0% {
       transform: rotateY(-180deg);
@@ -332,7 +412,17 @@
    }
 }
 
+.show-1000 {
+   display: none !important;
+}
+
 @media (max-width: 1000px) {
+   .hide-1000 {
+      display: none !important;
+   }
+   .show-1000 {
+      display: flex;
+   }
    :root {
       --roadmap-drageble-width: 250px;
 
@@ -342,6 +432,19 @@
       --roadmap-item-horizontal-offset: -30vw;
 
       --roadmap-item-size: 150px;
+   }
+
+   .arrow {
+      bottom: 50%;
+   }
+
+   .drag {
+      margin-top: 30px;
+   }
+
+   .roadmap__head {
+      flex-direction: column;
+      gap: 40px;
    }
 
    .roadmap__head_progress {

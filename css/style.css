@@ -530,7 +530,7 @@ html {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   z-index: 0;
+   z-index: -1;
 }
 
 .slide__image {
@@ -572,8 +572,9 @@ html {
 .main__content {
    height: 380px;
    border-radius: 26px;
-   background: rgba(0, 46, 119, 0.16);
-   backdrop-filter: blur(19.450000762939453px);
+   background: url("../image/slide__bg.png") no-repeat center center / cover;
+   /*background: rgba(0, 46, 119, 0.16);
+   backdrop-filter: blur(19.450000762939453px);*/
    padding: 12px;
    display: flex;
    flex-direction: column;
@@ -698,6 +699,45 @@ html {
    pointer-events: none;*/
 }
 
+.roadmap__wrapper {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.drag {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   padding: 12px;
+   border-radius: 16px;
+   background: rgba(0, 46, 119, 0.5);
+}
+
+.roadmap__head_card {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   padding: 20px;
+   border-radius: 32px;
+   border: 2px solid rgba(255, 255, 255, 0.2);
+   background: radial-gradient(105.32% 69.76% at 50% 52.6%, #3ee4fe 0%, #0651c6 100%);
+}
+
+.roadmap__card_text {
+   color: #fff;
+   text-align: center;
+   text-shadow: 0px 1.596px 0px rgba(0, 0, 0, 0.15);
+   font-family: Marvin;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 120%; /* 19.2px */
+   max-width: 124px;
+}
+
 @media (max-width: 1600px) {
    .green_crystal {
       left: 10%;
@@ -739,11 +779,18 @@ html {
    .left__cloud {
       left: 5%;
    }
-   .console {
-      --console-scale: 0.8 !important;
-   }
+
    .about {
       margin-top: -250px;
+   }
+   /*.console {
+      max-width: 650px;
+   }
+   .console__bg {
+      max-width: 650px;
+   }*/
+   .console {
+      --console-scale: 0.8 !important;
    }
 }
 
@@ -752,17 +799,40 @@ html {
       width: 200px;
    }
    .console {
-      --console-scale: 0.6 !important;
+      --console-scale: 0.5 !important;
    }
    .blue_crystal {
       width: 200px;
+      top: 20%;
+      left: 2%;
+   }
+   .pink_crystal {
+      width: 200px;
+      top: 20%;
+      right: 2%;
    }
    .green_crystal {
       width: 200px;
-      bottom: 0;
+      bottom: 10%;
+   }
+   .green_cube {
+      width: 140px;
+   }
+   .yellow_cube {
+      width: 140px;
+   }
+   .star1 {
+      width: 120px;
+      left: 10%;
+   }
+   .star4 {
+      width: 150px;
    }
    .blue_cube {
       width: 200px;
+   }
+   .star2 {
+      bottom: 15%;
    }
 
    .title {
@@ -788,6 +858,14 @@ html {
       bottom: 0;
    }
 
+   .coin1 {
+      width: 120px;
+   }
+
+   .coin2 {
+      width: 63px;
+   }
+
    .blue_cube {
       width: 140px;
       bottom: 0;
@@ -795,6 +873,39 @@ html {
    .first__light {
       width: 600px;
       top: 20%;
+   }
+   .blue_crystal {
+      width: 100px;
+   }
+   .pink_crystal {
+      width: 100px;
+   }
+   .green_crystal {
+      width: 100px;
+   }
+   .about {
+      max-height: 420px;
+      margin-top: 0;
+   }
+   .console {
+      margin-top: -300px;
+   }
+   .green_cube {
+      top: 90%;
+      right: 5%;
+      width: 80px;
+      z-index: 1;
+   }
+   .star4 {
+      width: 85px;
+      top: 100%;
+      right: 30%;
+   }
+   .yellow_cube {
+      width: 85px;
+      top: 100%;
+      left: 3%;
+      z-index: 1;
    }
 }
 
@@ -807,6 +918,16 @@ html {
       50% {
          transform: scale(1) translateY(10px);
       }
+   }
+   .blue_crystal {
+      left: 0;
+   }
+   .pink_crystal {
+      right: 0;
+   }
+
+   .about {
+      max-height: 360px;
    }
    .play {
       margin-top: 0px;
@@ -828,7 +949,17 @@ html {
       padding-top: 150px;
       padding-bottom: 200px;
    }
+   .console {
+      --console-scale: 0.4 !important;
+   }
 }
+
+@media (max-width: 360px) {
+   .console {
+      --console-scale: 0.35 !important;
+   }
+}
+
 [data-anim-on-scroll] {
    transition: all 0.4s ease 0s;
    opacity: 0;
@@ -870,6 +1001,24 @@ html {
 
 ._scale_anim._animate {
    transform: scale(1);
+}
+
+.coin_anim {
+   transition: opacity 0.4s ease 0s;
+   opacity: 0;
+}
+
+.coin_anim._animate {
+   opacity: 1;
+}
+
+.arrow_anim {
+   transition: opacity 1s ease 0s;
+   opacity: 0;
+}
+
+.arrow_anim._animate {
+   opacity: 1;
 }
 
 .star1.anim {
