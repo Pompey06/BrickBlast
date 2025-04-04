@@ -382,6 +382,10 @@ html {
    z-index: 2;
 }
 
+.title {
+   max-width: 787px;
+}
+
 .crystal {
    position: absolute;
    transition: transform 0.2s ease-out;
