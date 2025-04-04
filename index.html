@@ -1,559 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brick Blast</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
-  </head>
-  <body>
-    <div class="wrapper bg__wrap">
-      <!--<img src="./image/bg.png" alt="" class="bg hide-450" />
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Brick Blast</title>
+      <link rel="stylesheet" href="./css/style.css" />
+      <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
+   </head>
+   <body>
+      <div class="wrapper bg__wrap">
+         <!--<img src="./image/bg.png" alt="" class="bg hide-450" />
          <img src="./image/bgmb.png" alt="" class="bg show-450" />-->
-      <div class="content simple-page">
-        <header class="header _fixed">
-          <div class="header__container _container">
-            <a href="" class="header__logo">
-              <img src="./image/logo.svg" alt="" />
-            </a>
-            <div class="header__menu menu">
-              <div class="menu__icon">
-                <span></span>
-              </div>
-              <nav class="menu__body">
-                <ul class="menu__list">
-                  <li>
-                    <a href="#" class="menu__link">About</a>
-                  </li>
-                  <li>
-                    <a href="#" class="menu__link">Roadmap</a>
-                  </li>
-                  <li>
-                    <a href="#" class="menu__link">Partners</a>
-                  </li>
-                  <li>
-                    <div class="sub-list">
-                      <div class="sub-list__title">
-                        <span>BRICK</span>
-                        <div class="sub-list__icon">
-                          <img src="./image/arrow-bottom.svg" alt="" />
-                        </div>
-                      </div>
-                      <div class="sub-list__content">
-                        <a href="Dextools" class="sub-list__item"> Dextools </a>
-                        <a href="DexScreener" class="sub-list__item">
-                          DexScreener
-                        </a>
-                        <a href="CoinGecko" class="sub-list__item">
-                          CoinGecko
-                        </a>
-                        <a href="CoinMarketCap" class="sub-list__item">
-                          CoinMarketCap
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="sub-list">
-                      <div class="sub-list__title">
-                        <span>Social</span>
-                        <div class="sub-list__icon">
-                          <img src="./image/arrow-bottom.svg" alt="" />
-                        </div>
-                      </div>
-                      <div class="sub-list__content">
-                        <a href="Twitter" class="sub-list__item"> Twitter </a>
-                        <a href="Telegram" class="sub-list__item"> Telegram </a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="sub-list">
-                      <div class="sub-list__title">
-                        <span>More</span>
-                        <div class="sub-list__icon">
-                          <img src="./image/arrow-bottom.svg" alt="" />
-                        </div>
-                      </div>
-                      <div class="sub-list__content">
-                        <a href="Litepaper" class="sub-list__item">
-                          Litepaper
-                        </a>
-                        <a href="privacy-policy.html" class="sub-list__item">
-                          Privacy Policy
-                        </a>
-                        <a href="code-of-conduct.html" class="sub-list__item">
-                          Code of Conduct
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                  <button class="header__btn _scale_hover show-1150">
-                    <img
-                      src="./image/header__btn_bg.svg"
-                      alt=""
-                      class="header__btn_bg"
-                    />
-                    <span>Play NOW</span>
+         <div class="content simple-page">
+            <header class="header _fixed">
+               <div class="header__container _container">
+                  <a href="" class="header__logo">
+                     <img src="./image/logo.svg" alt="" />
+                  </a>
+                  <div class="header__menu menu">
+                     <div class="menu__icon">
+                        <span></span>
+                     </div>
+                     <nav class="menu__body">
+                        <ul class="menu__list">
+                           <li>
+                              <a href="#" class="menu__link">About</a>
+                           </li>
+                           <li>
+                              <a href="#" class="menu__link">Roadmap</a>
+                           </li>
+                           <li>
+                              <a href="#" class="menu__link">Partners</a>
+                           </li>
+                           <li>
+                              <div class="sub-list">
+                                 <div class="sub-list__title">
+                                    <span>BRICK</span>
+                                    <div class="sub-list__icon">
+                                       <img src="./image/arrow-bottom.svg" alt="" />
+                                    </div>
+                                 </div>
+                                 <div class="sub-list__content">
+                                    <a href="Dextools" class="sub-list__item"> Dextools </a>
+                                    <a href="DexScreener" class="sub-list__item"> DexScreener </a>
+                                    <a href="CoinGecko" class="sub-list__item"> CoinGecko </a>
+                                    <a href="CoinMarketCap" class="sub-list__item"> CoinMarketCap </a>
+                                 </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="sub-list">
+                                 <div class="sub-list__title">
+                                    <span>Social</span>
+                                    <div class="sub-list__icon">
+                                       <img src="./image/arrow-bottom.svg" alt="" />
+                                    </div>
+                                 </div>
+                                 <div class="sub-list__content">
+                                    <a href="Twitter" class="sub-list__item"> Twitter </a>
+                                    <a href="Telegram" class="sub-list__item"> Telegram </a>
+                                 </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="sub-list">
+                                 <div class="sub-list__title">
+                                    <span>More</span>
+                                    <div class="sub-list__icon">
+                                       <img src="./image/arrow-bottom.svg" alt="" />
+                                    </div>
+                                 </div>
+                                 <div class="sub-list__content">
+                                    <a href="Litepaper" class="sub-list__item"> Litepaper </a>
+                                    <a href="privacy-policy.html" class="sub-list__item"> Privacy Policy </a>
+                                    <a href="code-of-conduct.html" class="sub-list__item"> Code of Conduct </a>
+                                 </div>
+                              </div>
+                           </li>
+                           <button class="header__btn _scale_hover show-1150">
+                              <img src="./image/header__btn_bg.svg" alt="" class="header__btn_bg" />
+                              <span>Play NOW</span>
+                           </button>
+                        </ul>
+                     </nav>
+                  </div>
+                  <button class="header__btn _scale_hover hide-1150">
+                     <img src="./image/header__btn_bg.svg" alt="" class="header__btn_bg" />
+                     <span>Play NOW</span>
                   </button>
-                </ul>
-              </nav>
-            </div>
-            <button class="header__btn _scale_hover hide-1150">
-              <img
-                src="./image/header__btn_bg.svg"
-                alt=""
-                class="header__btn_bg"
-              />
-              <span>Play NOW</span>
-            </button>
-          </div>
-        </header>
-        <section class="info bg__wrap">
-          <img
-            src="./image/video__preview.png"
-            alt=""
-            class="info__video bg video__preview"
-          />
-          <!--<video src="./image/4.mp4" autoplay muted loop class="info__video bg"></video>-->
-          <img
-            data-anim-on-scroll
-            src="./image/first__light.svg"
-            alt=""
-            class="first__light"
-          />
-          <img
-            data-delay="1"
-            data-anim-on-scroll
-            src="./image/left__cloud.svg"
-            alt=""
-            class="left__cloud _cloud_anim"
-          />
-          <img
-            data-delay="1"
-            data-anim-on-scroll
-            src="./image/right__cloud.svg"
-            alt=""
-            class="right__cloud _cloud_anim"
-          />
-          <div class="cube-wrapper" data-parallax-factor="0.2">
-            <img src="./image/purple_cube.svg" alt="" class="purple_cube" />
-          </div>
-          <div class="cube-wrapper" data-parallax-factor="0.3">
-            <img src="./image/blue_cube.svg" alt="" class="blue_cube" />
-          </div>
+               </div>
+            </header>
+            <section class="info bg__wrap">
+               <img src="./image/video__preview.png" alt="" class="info__video bg video__preview" />
+               <!--<video src="./image/4.mp4" autoplay muted loop class="info__video bg"></video>-->
+               <img data-anim-on-scroll src="./image/first__light.svg" alt="" class="first__light" />
+               <img
+                  data-delay="1"
+                  data-anim-on-scroll
+                  src="./image/left__cloud.svg"
+                  alt=""
+                  class="left__cloud _cloud_anim"
+               />
+               <img
+                  data-delay="1"
+                  data-anim-on-scroll
+                  src="./image/right__cloud.svg"
+                  alt=""
+                  class="right__cloud _cloud_anim"
+               />
+               <div class="cube-wrapper" data-parallax-factor="0.2">
+                  <img src="./image/purple_cube.svg" alt="" class="purple_cube" />
+               </div>
+               <div class="cube-wrapper" data-parallax-factor="0.3">
+                  <img src="./image/blue_cube.svg" alt="" class="blue_cube" />
+               </div>
 
-          <div class="info__content">
-            <img
-              data-delay="0.4"
-              data-anim-on-scroll
-              src="./image/logo.png"
-              alt=""
-              class="title _scale_anim"
-            />
-            <a
-              data-delay="0.8"
-              data-anim-on-scroll
-              href="#"
-              class="play _left_anim_tr"
-            >
-              <img src="./image/play.png" alt="" class="_scale_hover" />
-            </a>
-          </div>
-        </section>
-        <section class="about">
-          <div class="console">
-            <img src="./image/console.png" alt="" class="console__bg" />
-            <div class="console__images" data-console>
-              <div class="console__first" data-console-first>
-                <img src="./image/console/01.png" alt="" />
-              </div>
-              <div class="console__wrap">
-                <div class="swiper__prev">
-                  <img src="./image/console/prev.svg" alt="" />
-                </div>
-                <div class="swiper__next">
-                  <img src="./image/console/next.svg" alt="" />
-                </div>
-                <div class="swiper console__swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./image/console/02.png" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./image/console/03.png" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./image/console/04.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="console__last" data-console-last>
-                <img src="./image/console/05.png" alt="" />
-              </div>
-              <div class="console__text">brick blast</div>
-            </div>
-            <div class="console__btns">
-              <div class="dpad_wrap">
-                <div class="dpad" data-dpad>
-                  <img src="./image/dpad.png" alt="" class="dpad__bg" />
-                  <img
-                    src="./image/left_bg__pressed.png"
-                    alt=""
-                    class="left_bg__pressed"
-                  />
-                  <img
-                    src="./image/right_bg__pressed.png"
-                    alt=""
-                    class="right_bg__pressed"
-                  />
-                  <div class="dpad__button dpad-left" data-dpad-prev>
-                    <img
-                      src="./image/dpad-left.png"
-                      class="left-arrow"
-                      alt=""
-                    />
-                    <img
-                      src="./image/left__pressed.png"
-                      alt=""
-                      class="left__pressed"
-                    />
-                  </div>
-                  <div class="dpad__button dpad-right" data-dpad-next>
-                    <img
-                      src="./image/dpad-right.png"
-                      class="right-arrow"
-                      alt=""
-                    />
-                    <img
-                      src="./image/right__pressed.png"
-                      alt=""
-                      class="right__pressed"
-                    />
-                  </div>
-                </div>
-              </div>
-              <img
-                src="./image/console__buttons.png"
-                alt=""
-                class="console__buttons"
-              />
-              <div class="console__btns_wrap">
-                <div class="console__start" data-btn="onStartConsole">
-                  <img src="./image/start.png" alt="" class="start__img" />
-                  <img
-                    src="./image/start__pressed.png"
-                    alt=""
-                    class="start__pressed"
-                  />
-                  start
-                </div>
-                <div class="console__start" data-btn="onTrailerConsole">
-                  <img src="./image/start.png" alt="" class="start__img" />
-                  <img
-                    src="./image/start__pressed.png"
-                    alt=""
-                    class="start__pressed"
-                  />
-                  TRAILER
-                </div>
-              </div>
+               <div class="info__content">
+                  <img data-delay="0.4" data-anim-on-scroll src="./image/logo.png" alt="" class="title _scale_anim" />
+                  <a data-delay="0.8" data-anim-on-scroll href="#" class="play _left_anim_tr">
+                     <img src="./image/play.png" alt="" class="_scale_hover" />
+                  </a>
+               </div>
+            </section>
+            <main class="main">
+               <img src="./image/chain.svg" alt="" class="chain bg" />
+               <section class="about bg__wrap">
+                  <img src="./image/console/blue_crystal.svg" alt="" class="blue_crystal" />
+                  <img src="./image/console/green_crystal.svg" alt="" class="green_crystal" />
+                  <img src="./image/console/pink_crystal.svg" alt="" class="pink_crystal" />
+                  <img src="./image/console/yellow_cube.svg" alt="" class="yellow_cube" />
+                  <img src="./image/console/green_cube.svg" alt="" class="green_cube" />
+                  <img src="./image/console/star1.svg" alt="" class="star1" />
+                  <img src="./image/console/star2.svg" alt="" class="star2" />
+                  <img src="./image/console/star3.svg" alt="" class="star3" />
+                  <img src="./image/console/star4.svg" alt="" class="star4" />
+                  <div class="console">
+                     <img src="./image/console.png" alt="" class="console__bg" />
+                     <div class="console__images" data-console>
+                        <div class="console__first" data-console-first>
+                           <img src="./image/console/01.png" alt="" />
+                        </div>
+                        <div class="console__wrap">
+                           <div class="swiper__prev">
+                              <img src="./image/console/prev.svg" alt="" />
+                           </div>
+                           <div class="swiper__next">
+                              <img src="./image/console/next.svg" alt="" />
+                           </div>
+                           <div class="swiper console__swiper">
+                              <div class="swiper-wrapper">
+                                 <div class="swiper-slide">
+                                    <img src="./image/slide__light.svg" alt="" class="slide__light" />
+                                    <div class="slide__content">
+                                       <div class="main__content">
+                                          <img src="./image/logo.png" alt="" class="slide__image" />
+                                          <p class="slide__text">
+                                             Get ready for Brick Blast, the next-gen Play-to-Earn puzzle game built on
+                                             Solana! If you love block puzzles and want to earn real rewards, this game
+                                             is made for you!
+                                          </p>
+                                       </div>
+                                       <div class="content__buttons">use buttons down below</div>
+                                    </div>
+                                    <!--<img src="./image/console/02.png" alt="" />-->
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <img src="./image/slide__light.svg" alt="" class="slide__light" />
+                                    <div class="slide__content">
+                                       <div class="main__content">
+                                          <h2 class="slide__title">Engaging Gameplay</h2>
+                                          <img src="./image/console/02.svg" alt="" class="slide__image" />
+                                          <p class="slide__text">
+                                             Drag & drop blocks, clear lines, and rack up high scores in a fun and
+                                             strategic puzzle challenge.
+                                          </p>
+                                       </div>
+                                       <div class="content__buttons">use buttons down below</div>
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <img src="./image/slide__light.svg" alt="" class="slide__light" />
+                                    <div class="slide__content">
+                                       <div class="main__content">
+                                          <h2 class="slide__title">Earn & Trade</h2>
+                                          <img src="./image/console/03.svg" alt="" class="slide__image" />
+                                          <p class="slide__text">
+                                             Win crystals, exchange them for $BRICK tokens, and unlock exclusive NFT
+                                             rewards.
+                                          </p>
+                                       </div>
+                                       <div class="content__buttons">use buttons down below</div>
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <img src="./image/slide__light.svg" alt="" class="slide__light" />
+                                    <div class="slide__content">
+                                       <div class="main__content">
+                                          <h2 class="slide__title">Compete & Conquer</h2>
+                                          <img src="./image/console/04.svg" alt="" class="slide__image" />
+                                          <p class="slide__text">
+                                             Climb the global leaderboards, join special events, and earn massive
+                                             prizes!
+                                          </p>
+                                       </div>
+                                       <div class="content__buttons">use buttons down below</div>
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <img src="./image/slide__light.svg" alt="" class="slide__light" />
+                                    <div class="slide__content">
+                                       <div class="main__content">
+                                          <h2 class="slide__title">No Download Needed</h2>
+                                          <img src="./image/console/05.svg" alt="" class="slide__image" />
+                                          <p class="slide__text">
+                                             Play instantly on Telegram Mini Apps with zero hassle!
+                                          </p>
+                                       </div>
+                                       <div class="content__buttons">use buttons down below</div>
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <img src="./image/slide__light.svg" alt="" class="slide__light" />
+                                    <div class="slide__content">
+                                       <div class="main__content _last">
+                                          <h2 class="slide__title">Join now</h2>
+                                          <img src="./image/logo.png" alt="" class="slide__image" />
+                                          <p class="slide__text">and turn your skills into real rewards!</p>
+                                       </div>
+                                       <div class="slider__buttons">
+                                          <div class="a__button slider__button">
+                                             press <span class="circle">A</span>
+                                             <span class="semitransparent">to join</span>
+                                          </div>
+                                          <div class="b__button slider__button">
+                                             press <span class="circle">B</span>
+                                             <span class="semitransparent">to go back</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="console__last" data-console-last>
+                           <video
+                              class="content__video"
+                              src="./image/4.mp4"
+                              poster="./image/console/05.png"
+                              playsinline
+                           ></video>
+                           <div class="video__play-wrapper">
+                              <img src="./image/play.svg" alt="" class="video__play" />
+                           </div>
+                        </div>
+                        <div class="console__text">brick blast</div>
+                     </div>
+                     <div class="console__btns">
+                        <div class="dpad_wrap">
+                           <div class="dpad" data-dpad>
+                              <img src="./image/dpad.png" alt="" class="dpad__bg" />
+                              <img src="./image/left_bg__pressed.png" alt="" class="left_bg__pressed" />
+                              <img src="./image/right_bg__pressed.png" alt="" class="right_bg__pressed" />
+                              <div class="dpad__button dpad-left" data-dpad-prev>
+                                 <img src="./image/dpad-left.png" class="left-arrow" alt="" />
+                                 <img src="./image/left__pressed.png" alt="" class="left__pressed" />
+                              </div>
+                              <div class="dpad__button dpad-right" data-dpad-next>
+                                 <img src="./image/dpad-right.png" class="right-arrow" alt="" />
+                                 <img src="./image/right__pressed.png" alt="" class="right__pressed" />
+                              </div>
+                           </div>
+                        </div>
+                        <img src="./image/console__buttons.png" alt="" class="console__buttons" />
+                        <div class="console__btns_wrap">
+                           <div class="console__start" data-btn="onStartConsole">
+                              <img src="./image/start.png" alt="" class="start__img" />
+                              <img src="./image/start__pressed.png" alt="" class="start__pressed" />
+                              start
+                           </div>
+                           <div class="console__start" data-btn="onTrailerConsole">
+                              <img src="./image/start.png" alt="" class="start__img" />
+                              <img src="./image/start__pressed.png" alt="" class="start__pressed" />
+                              TRAILER
+                           </div>
+                        </div>
 
-              <div class="ab__wrapper">
-                <div class="console__start" data-btn="onPressA">
-                  <img src="./image/a-button.png" alt="" class="button__img" />
-                  <img
-                    src="./image/a-button_pressed.png"
-                    alt=""
-                    class="button__pressed"
-                  />
-                </div>
-                <div class="console__start" data-btn="onPressB">
-                  <img src="./image/b-button.png" alt="" class="button__img" />
-                  <img
-                    src="./image/b-button-pressed.png"
-                    alt=""
-                    class="button__pressed"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="roadmap">
-          <div class="_container">
-            <img
-              src="./image/roadmap__title.png"
-              alt=""
-              class="roadmap__title"
-            />
+                        <div class="ab__wrapper">
+                           <div class="console__start" data-btn="onPressA">
+                              <img src="./image/a-button.png" alt="" class="button__img" />
+                              <img src="./image/a-button_pressed.png" alt="" class="button__pressed" />
+                           </div>
+                           <div class="console__start" data-btn="onPressB">
+                              <img src="./image/b-button.png" alt="" class="button__img" />
+                              <img src="./image/b-button-pressed.png" alt="" class="button__pressed" />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="roadmap">
+                  <div class="_container">
+                     <img src="./image/roadmap__title.png" alt="" class="roadmap__title" />
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1869"
+                        height="511"
+                        class="arrow-animation"
+                        viewBox="0 0 1869 511"
+                        fill="none"
+                     >
+                        <path
+                           d="M113.852 64.0003L114.942 67.3091L114.942 67.3091L113.852 64.0003ZM187.218 158.26L187.517 154.789L187.218 158.26ZM250.617 5.83139L249.963 9.25343L250.056 9.27104L250.149 9.28365L250.617 5.83139ZM1868.78 47.8055C1868.86 45.8833 1867.37 44.2562 1865.45 44.1713L1834.13 42.7883C1832.2 42.7034 1830.58 44.1929 1830.49 46.1151C1830.41 48.0373 1831.9 49.6643 1833.82 49.7492L1861.66 50.9787L1860.43 78.8225C1860.35 80.7447 1861.84 82.3718 1863.76 82.4567C1865.68 82.5415 1867.31 81.0521 1867.39 79.1298L1868.78 47.8055ZM-65.6427 307.244C-62.2716 308.123 -62.2716 308.123 -62.2716 308.124C-62.2716 308.124 -62.2716 308.124 -62.2717 308.124C-62.2717 308.124 -62.2716 308.124 -62.2716 308.124C-62.2715 308.123 -62.2714 308.123 -62.2712 308.122C-62.2707 308.12 -62.2699 308.117 -62.2687 308.113C-62.2665 308.104 -62.2629 308.09 -62.2579 308.071C-62.248 308.034 -62.2327 307.976 -62.2121 307.899C-62.1708 307.744 -62.1079 307.51 -62.0233 307.2C-61.8542 306.58 -61.5981 305.655 -61.2538 304.451C-60.565 302.041 -59.5232 298.51 -58.1168 294.048L-64.7623 291.954C-66.1888 296.48 -67.2486 300.071 -67.9532 302.536C-68.3055 303.768 -68.5691 304.72 -68.7454 305.366C-68.8335 305.689 -68.8999 305.936 -68.9445 306.103C-68.9669 306.187 -68.9838 306.251 -68.9954 306.295C-69.0011 306.317 -69.0056 306.334 -69.0086 306.345C-69.0102 306.351 -69.0114 306.356 -69.0123 306.359C-69.0127 306.361 -69.013 306.362 -69.0133 306.363C-69.0135 306.364 -69.0136 306.364 -69.0137 306.365C-69.0137 306.365 -69.0138 306.365 -69.0138 306.365C-69.0138 306.365 -69.0139 306.365 -65.6427 307.244ZM-53.4726 280.012C-50.6867 271.957 -47.2203 262.52 -43.0457 252.166L-49.508 249.561C-53.731 260.035 -57.2379 269.582 -60.0576 277.734L-53.4726 280.012ZM-37.3486 238.529C-33.6233 229.919 -29.462 220.874 -24.8516 211.613L-31.0891 208.508C-35.7603 217.89 -39.9738 227.049 -43.7435 235.762L-37.3486 238.529ZM-18.0645 198.46C-13.5083 189.941 -8.58091 181.333 -3.27321 172.798L-9.19013 169.118C-14.5856 177.794 -19.5882 186.535 -24.2088 195.174L-18.0645 198.46ZM4.76394 160.383C10.2395 152.262 16.07 144.287 22.2634 136.601L16.8379 132.229C10.5083 140.084 4.56125 148.22 -1.01318 156.487L4.76394 160.383ZM31.7905 125.347C38.3434 117.989 45.2586 110.996 52.5438 104.509L47.9101 99.3049C40.4041 105.989 33.2999 113.175 26.5871 120.713L31.7905 125.347ZM63.8263 95.1154C71.5807 89.0996 79.7141 83.6781 88.235 78.9945L84.8787 72.8884C76.0092 77.7636 67.5716 83.3911 59.5553 89.6102L63.8263 95.1154ZM101.325 72.5328C105.766 70.5849 110.305 68.8377 114.942 67.3091L112.761 60.6916C107.908 62.2913 103.163 64.1181 98.5262 66.152L101.325 72.5328ZM114.942 67.3091C119.291 65.8758 123.548 64.6686 127.712 63.672L126.09 56.8956C121.733 57.9385 117.289 59.1991 112.761 60.6916L114.942 67.3091ZM140.713 61.1828C149.999 59.8586 158.749 59.6033 166.916 60.2228L167.443 53.275C158.756 52.6161 149.499 52.8916 139.729 54.2848L140.713 61.1828ZM179.919 62.0193C189.008 63.8679 197.22 66.8435 204.473 70.6135L207.687 64.4309C199.853 60.3596 191.027 57.1681 181.308 55.1914L179.919 62.0193ZM215.503 77.459C222.956 82.9338 228.945 89.2948 233.337 95.959L239.155 92.1247C234.287 84.7393 227.715 77.7839 219.628 71.8434L215.503 77.459ZM239.176 107.294C242.423 115.908 242.97 124.355 240.795 131.603L247.469 133.606C250.168 124.611 249.368 114.576 245.695 104.836L239.176 107.294ZM235.015 142.048C230.443 147.253 223.418 151.432 213.451 153.601L214.933 160.409C226.063 157.987 234.515 153.176 240.25 146.647L235.015 142.048ZM200.72 155.147C196.654 155.305 192.257 155.197 187.517 154.789L186.919 161.731C191.92 162.162 196.609 162.28 200.99 162.109L200.72 155.147ZM187.517 154.789C182.822 154.385 178.555 153.509 174.696 152.236L172.513 158.853C176.924 160.308 181.725 161.284 186.919 161.731L187.517 154.789ZM163.219 146.561C156.113 141.615 150.961 134.727 147.664 126.549L141.202 129.155C144.942 138.432 150.889 146.468 159.239 152.28L163.219 146.561ZM144.193 113.944C142.83 105.662 142.943 96.6485 144.473 87.4621L137.6 86.3177C135.961 96.1607 135.816 105.948 137.318 115.075L144.193 113.944ZM147.566 74.4414C150.16 66.0485 153.891 57.7814 158.678 50.0753L152.759 46.3985C147.653 54.6182 143.676 63.4306 140.909 72.3841L147.566 74.4414ZM166.482 39.1842C172.12 32.3359 178.705 26.2339 186.157 21.2593L182.288 15.4642C174.225 20.847 167.14 27.4224 161.102 34.7554L166.482 39.1842ZM197.773 14.7819C205.556 11.2366 214.091 8.84 223.329 7.91809L222.637 0.984789C212.623 1.98419 203.347 4.58633 194.885 8.44095L197.773 14.7819ZM236.624 7.61914C240.936 7.84401 245.383 8.37883 249.963 9.25343L251.27 2.40936C246.387 1.47691 241.624 0.902724 236.987 0.660862L236.624 7.61914ZM250.149 9.28365C254.58 9.88466 258.995 10.7439 263.401 11.8499L265.097 5.09187C260.452 3.92551 255.782 3.01622 251.085 2.37914L250.149 9.28365ZM276.541 15.8789C284.853 18.883 293.147 22.7323 301.454 27.35L304.839 21.2601C296.25 16.4852 287.616 12.4728 278.909 9.32599L276.541 15.8789ZM313.05 34.2811C320.535 39.0606 328.034 44.4277 335.569 50.3229L339.863 44.8352C332.179 38.8234 324.498 33.3241 316.8 28.4085L313.05 34.2811ZM346.392 59.1236C353.233 64.8915 360.106 71.0624 367.029 77.5908L371.81 72.5217C364.808 65.9183 357.837 59.6596 350.883 53.7966L346.392 59.1236ZM377.251 87.4475C383.658 93.7571 390.111 100.346 396.621 107.18L401.666 102.373C395.113 95.4956 388.608 88.8525 382.14 82.4828L377.251 87.4475ZM406.29 117.454C412.482 124.112 418.729 130.968 425.043 137.993L430.225 133.335C423.891 126.288 417.616 119.401 411.392 112.709L406.29 117.454ZM434.41 148.478C440.491 155.323 446.635 162.305 452.853 169.399L458.093 164.806C451.87 157.706 445.714 150.711 439.619 143.85L434.41 148.478ZM462.12 179.989C468.169 186.908 474.291 193.92 480.49 200.994L485.731 196.403C479.535 189.332 473.418 182.326 467.366 175.403L462.12 179.989ZM489.802 211.6C495.89 218.516 502.055 225.483 508.306 232.479L513.502 227.836C507.266 220.857 501.112 213.903 495.032 206.996L489.802 211.6ZM517.747 242.991C523.941 249.849 530.219 256.725 536.589 263.596L541.699 258.859C535.352 252.013 529.094 245.16 522.918 238.321L517.747 242.991ZM546.203 273.887C552.568 280.645 559.026 287.39 565.581 294.101L570.565 289.232C564.042 282.554 557.614 275.84 551.275 269.11L546.203 273.887ZM575.453 304.102C582.032 310.698 588.71 317.252 595.495 323.744L600.312 318.71C593.57 312.258 586.93 305.742 580.386 299.182L575.453 304.102ZM605.697 333.383C612.527 339.752 619.463 346.051 626.513 352.263L631.119 347.035C624.122 340.869 617.234 334.614 610.449 328.287L605.697 333.383ZM637.109 361.456C644.222 367.531 651.449 373.511 658.796 379.376L663.143 373.93C655.859 368.116 648.691 362.186 641.635 356.158L637.109 361.456ZM669.833 388.027C677.252 393.736 684.792 399.323 692.461 404.771L696.496 399.091C688.903 393.696 681.434 388.162 674.083 382.505L669.833 388.027ZM703.982 412.783C711.715 418.044 719.576 423.159 727.572 428.112L731.241 422.188C723.333 417.29 715.555 412.229 707.902 407.022L703.982 412.783ZM739.63 435.393C747.674 440.127 755.852 444.692 764.17 449.073L767.417 442.908C759.199 438.58 751.116 434.068 743.164 429.388L739.63 435.393ZM776.753 455.502C785.097 459.636 793.581 463.582 802.208 467.322L804.98 460.93C796.464 457.237 788.087 453.341 779.846 449.259L776.753 455.502ZM815.228 472.766C823.869 476.246 832.652 479.519 841.583 482.57L843.835 475.976C835.025 472.966 826.359 469.737 817.831 466.303L815.228 472.766ZM854.947 486.933C863.87 489.712 872.938 492.27 882.155 494.59L883.856 487.833C874.765 485.544 865.821 483.022 857.019 480.28L854.947 486.933ZM895.727 497.809C904.846 499.841 914.109 501.641 923.519 503.196L924.655 496.322C915.373 494.788 906.237 493.012 897.242 491.008L895.727 497.809ZM937.391 505.294C946.537 506.551 955.819 507.576 965.241 508.359L965.818 501.416C956.52 500.643 947.362 499.631 938.339 498.391L937.391 505.294ZM979.481 509.351C988.641 509.866 997.931 510.153 1007.35 510.202L1007.39 503.234C998.085 503.186 988.913 502.902 979.872 502.394L979.481 509.351ZM1021.42 510.099C1030.76 509.914 1040.23 509.497 1049.82 508.838L1049.35 501.887C1039.86 502.538 1030.51 502.95 1021.28 503.132L1021.42 510.099ZM1063.55 507.739C1072.76 506.896 1082.09 505.832 1091.54 504.539L1090.59 497.636C1081.24 498.915 1072.02 499.967 1062.91 500.8L1063.55 507.739ZM1105.81 502.427C1114.75 501.004 1123.79 499.378 1132.95 497.542L1131.58 490.71C1122.51 492.528 1113.56 494.138 1104.71 495.546L1105.81 502.427ZM1146.68 494.649C1155.89 492.615 1165.21 490.371 1174.64 487.91L1172.88 481.168C1163.54 483.607 1154.3 485.83 1145.18 487.845L1146.68 494.649ZM1187.77 484.364C1196.55 481.91 1205.43 479.27 1214.41 476.438L1212.32 469.793C1203.41 472.602 1194.6 475.22 1185.9 477.653L1187.77 484.364ZM1227.95 472.046C1236.76 469.11 1245.66 465.991 1254.66 462.684L1252.25 456.144C1243.32 459.427 1234.49 462.522 1225.75 465.436L1227.95 472.046ZM1267.46 457.872C1276.04 454.581 1284.71 451.119 1293.46 447.485L1290.79 441.05C1282.09 444.661 1273.49 448.098 1264.97 451.367L1267.46 457.872ZM1306.65 441.902C1315.12 438.249 1323.68 434.435 1332.31 430.456L1329.4 424.128C1320.82 428.083 1312.31 431.874 1303.89 435.504L1306.65 441.902ZM1344.71 424.656C1353.02 420.714 1361.39 416.621 1369.84 412.373L1366.72 406.148C1358.31 410.372 1349.98 414.442 1341.73 418.362L1344.71 424.656ZM1382.58 405.887C1390.86 401.611 1399.21 397.188 1407.64 392.615L1404.32 386.491C1395.93 391.041 1387.62 395.442 1379.38 399.695L1382.58 405.887ZM1419.56 386.072C1427.54 381.644 1435.58 377.082 1443.69 372.385L1440.2 366.356C1432.13 371.032 1424.12 375.572 1416.18 379.98L1419.56 386.072ZM1455.9 365.237C1464.08 360.404 1472.32 355.435 1480.62 350.326L1476.97 344.392C1468.7 349.479 1460.5 354.428 1452.36 359.24L1455.9 365.237ZM1492.29 343.08C1499.93 338.3 1507.62 333.403 1515.36 328.387L1511.58 322.539C1503.86 327.535 1496.2 332.413 1488.6 337.175L1492.29 343.08ZM1527.02 320.776C1534.82 315.642 1542.68 310.389 1550.6 305.015L1546.68 299.251C1538.79 304.606 1530.97 309.84 1523.19 314.955L1527.02 320.776ZM1562.51 296.864C1570.06 291.654 1577.67 286.335 1585.33 280.905L1581.3 275.221C1573.67 280.633 1566.08 285.935 1558.55 291.127L1562.51 296.864ZM1596.43 272.982C1603.86 267.647 1611.33 262.21 1618.86 256.667L1614.72 251.058C1607.22 256.584 1599.77 262.005 1592.37 267.322L1596.43 272.982ZM1630.18 248.275C1637.75 242.627 1645.37 236.874 1653.04 231.014L1648.81 225.477C1641.16 231.321 1633.56 237.058 1626.01 242.69L1630.18 248.275ZM1664.58 222.143C1671.67 216.665 1678.8 211.097 1685.97 205.437L1681.65 199.968C1674.5 205.614 1667.39 211.168 1660.32 216.631L1664.58 222.143ZM1696.71 196.909C1703.9 191.178 1711.12 185.356 1718.39 179.441L1714 174.037C1706.74 179.937 1699.53 185.745 1692.37 191.462L1696.71 196.909ZM1729.33 170.5C1736.64 164.492 1744 158.392 1751.39 152.197L1746.92 146.855C1739.54 153.036 1732.2 159.122 1724.91 165.116L1729.33 170.5ZM1762.52 142.835C1769.38 137.038 1776.27 131.162 1783.2 125.204L1778.66 119.92C1771.74 125.865 1764.86 131.729 1758.02 137.513L1762.52 142.835ZM1793.57 116.258C1800.49 110.254 1807.46 104.17 1814.46 98.0037L1809.85 92.7751C1802.86 98.9289 1795.91 105.001 1789 110.993L1793.57 116.258ZM1824.98 88.6937C1832.02 82.4462 1839.09 76.117 1846.2 69.7053L1841.54 64.5306C1834.44 70.9304 1827.38 77.2477 1820.36 83.4831L1824.98 88.6937ZM1856.9 60.0258C1860.47 56.7785 1864.06 53.5104 1867.65 50.2216L1862.94 45.0821C1859.36 48.3651 1855.78 51.6273 1852.21 54.8688L1856.9 60.0258Z"
+                           fill="none"
+                           stroke="white"
+                        />
+                     </svg>
+                     <div class="roadmap__head">
+                        <div class="roadmap__head_progress">
+                           <div class="roadmap__head_progress--active" data-min-width="25"></div>
+                        </div>
+                     </div>
 
-            <div class="roadmap__head">
-              <div class="roadmap__head_progress">
-                <div
-                  class="roadmap__head_progress--active"
-                  data-min-width="25"
-                ></div>
-              </div>
-            </div>
+                     <div class="roadmap__content">
+                        <div class="roadmap__item roadmap__item_1">
+                           <img src="./image/roadmap/01.png" alt="" />
+                        </div>
+                        <div class="roadmap__item roadmap__item_2">
+                           <img src="./image/roadmap/02.png" alt="" />
+                        </div>
+                        <div class="roadmap__item roadmap__item_3">
+                           <img src="./image/roadmap/03.png" alt="" />
+                        </div>
+                        <div class="roadmap__item roadmap__item_4">
+                           <img src="./image/roadmap/04.png" alt="" />
+                        </div>
+                        <div class="roadmap__wrap">
+                           <div class="roadmap__drageble">
+                              <div class="roadmap__drageble_item">
+                                 <div class="roadmap__drageble_item_number">1</div>
+                                 <img src="./image/roadmap/01.png" alt="" data-staroge-image="1" />
+                              </div>
+                              <div class="roadmap__drageble_item">
+                                 <div class="roadmap__drageble_item_number">2</div>
+                                 <img src="./image/roadmap/02.png" alt="" data-staroge-image="2" />
+                              </div>
+                              <div class="roadmap__drageble_item">
+                                 <div class="roadmap__drageble_item_number">3</div>
+                                 <img src="./image/roadmap/03.png" alt="" data-staroge-image="3" />
+                              </div>
+                              <div class="roadmap__drageble_item">
+                                 <div class="roadmap__drageble_item_number">4</div>
+                                 <img src="./image/roadmap/04.png" alt="" data-staroge-image="4" />
+                              </div>
+                           </div>
+                           <div class="roadmap__text _hide" data-roadmap-text="1">
+                              <h3 class="roadmap__number">1</h3>
+                              <div class="roadmap__completed">completed</div>
+                              <h2 class="roadmap__text_title">Beta Launch & Core Features</h2>
+                              <div class="roadmap__list">
+                                 <div class="roadmap__list_item _active">
+                                    Design, development and launch of the website
+                                 </div>
+                                 <div class="roadmap__list_item _active">Launch in Telegram Mini Apps</div>
+                                 <div class="roadmap__list_item _active">Core Gameplay Release</div>
+                                 <div class="roadmap__list_item _active">Crystals & tickets – In-game economy</div>
+                                 <div class="roadmap__list_item _active">Leaderboard System development</div>
+                              </div>
+                              <img src="./image/roadmap__cross.svg" alt="roadmap__cross" class="roadmap__cross" />
+                           </div>
+                           <div class="roadmap__text _hide" data-roadmap-text="2">
+                              <h3 class="roadmap__number">2</h3>
+                              <h2 class="roadmap__text_title">Launch and start of a marketing campaign</h2>
+                              <div class="roadmap__list">
+                                 <div class="roadmap__list_item _active">$BRICK Token Launch</div>
+                                 <div class="roadmap__list_item _active">Marketing campaigns</div>
+                                 <div class="roadmap__list_item">
+                                    Events & Competitions – Seasonal tournaments with prizes
+                                 </div>
+                                 <div class="roadmap__list_item">Collaborations with Web3 projects</div>
+                              </div>
+                              <img src="./image/roadmap__cross.svg" alt="roadmap__cross" class="roadmap__cross" />
+                           </div>
+                           <div class="roadmap__text _hide" data-roadmap-text="3">
+                              <h3 class="roadmap__number">3</h3>
+                              <h2 class="roadmap__text_title">NFT and Economy Expansion</h2>
+                              <div class="roadmap__list">
+                                 <div class="roadmap__list_item">Solana Wallet Integration</div>
+                                 <div class="roadmap__list_item">NFT System Launch</div>
+                                 <div class="roadmap__list_item">NFT Marketplace – Trade in-game assets</div>
+                                 <div class="roadmap__list_item">CEX Listings</div>
+                              </div>
+                              <img src="./image/roadmap__cross.svg" alt="roadmap__cross" class="roadmap__cross" />
+                           </div>
+                           <div class="roadmap__text _hide" data-roadmap-text="4">
+                              <h3 class="roadmap__number">4</h3>
+                              <h2 class="roadmap__text_title">Scaling & UX Improvements</h2>
+                              <div class="roadmap__list">
+                                 <div class="roadmap__list_item">New Game Modes – Challenges and special tasks</div>
+                                 <div class="roadmap__list_item">
+                                    Optimization & New Content – Game balance improvements and new blocks
+                                 </div>
+                                 <div class="roadmap__list_item">
+                                    PvP & Multiplayer Modes – Players can challenge each other for rewards
+                                 </div>
+                                 <div class="roadmap__list_item">
+                                    Staking & Passive Rewards – Players can stake $BRICK for additional earnings
+                                 </div>
+                              </div>
+                              <img src="./image/roadmap__cross.svg" alt="roadmap__cross" class="roadmap__cross" />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </main>
+            <section class="partners bg__wrap">
+               <img src="./image/partners__title.png" alt="" class="partners__title" />
+               <img src="./image/partners/pink__crystal.svg" class="crystal pink" data-parallax-factor="0.4" />
+               <img src="./image/partners/blue__lightning.svg" class="crystal blue" data-parallax-factor="0.25" />
+               <img src="./image/partners/green__crystal.svg" class="crystal green" data-parallax-factor="0.3" />
+               <img src="./image/partners/orange__crystal.svg" class="crystal orange" data-parallax-factor="0.35" />
+               <img src="./image/partners/small__crystal.svg" class="crystal small" data-parallax-factor="0.2" />
+               <img src="./image/partners/small2__crystal.svg" class="crystal small2" data-parallax-factor="0.15" />
 
-            <div class="roadmap__content">
-              <div class="roadmap__item roadmap__item_1">
-                <img src="./image/roadmap/01.png" alt="" />
-              </div>
-              <div class="roadmap__item roadmap__item_2">
-                <img src="./image/roadmap/02.png" alt="" />
-              </div>
-              <div class="roadmap__item roadmap__item_3">
-                <img src="./image/roadmap/03.png" alt="" />
-              </div>
-              <div class="roadmap__item roadmap__item_4">
-                <img src="./image/roadmap/04.png" alt="" />
-              </div>
-              <div class="roadmap__wrap">
-                <div class="roadmap__drageble">
-                  <div class="roadmap__drageble_item">
-                    <div class="roadmap__drageble_item_number">1</div>
-                    <img
-                      src="./image/roadmap/01.png"
-                      alt=""
-                      data-staroge-image="1"
-                    />
+               <div id="partners-physics"></div>
+            </section>
+            <footer>
+               <div class="footer__content _container">
+                  <a href="#" class="footer__logo">
+                     <img src="./image/logo.svg" alt="" />
+                  </a>
+                  <div class="footer__cols">
+                     <div class="footer__col">
+                        <a class="_scale_hover" href="#">About</a>
+                        <a class="_scale_hover" href="#">Roadmap</a>
+                        <a class="_scale_hover" href="#">Partners</a>
+                     </div>
+                     <div class="footer__col">
+                        <a class="_scale_hover" href="#">Litepaper</a>
+                        <a class="_scale_hover" href="privacy-policy.html">Privacy Policy</a>
+                        <a class="_scale_hover" href="code-of-conduct.html">Code of Conduct</a>
+                     </div>
+                     <div class="footer__col">
+                        <a class="_scale_hover" href="#">Dextools</a>
+                        <a class="_scale_hover" href="#">DexScreener</a>
+                        <a class="_scale_hover" href="#">CoinGecko</a>
+                        <a class="_scale_hover" href="#">CoinMarketCap</a>
+                     </div>
                   </div>
-                  <div class="roadmap__drageble_item">
-                    <div class="roadmap__drageble_item_number">2</div>
-                    <img
-                      src="./image/roadmap/02.png"
-                      alt=""
-                      data-staroge-image="2"
-                    />
+                  <div class="footer__networks">
+                     <h3 class="footer__networks_title">Follow us & Stay tuned!</h3>
+                     <div class="networks">
+                        <a href="Telegram" class="_scale_hover">
+                           <img src="./image/tg.svg" alt="" />
+                        </a>
+                        <a href="Twitter" class="_scale_hover">
+                           <img src="./image/x.svg" alt="" />
+                        </a>
+                     </div>
                   </div>
-                  <div class="roadmap__drageble_item">
-                    <div class="roadmap__drageble_item_number">3</div>
-                    <img
-                      src="./image/roadmap/03.png"
-                      alt=""
-                      data-staroge-image="3"
-                    />
-                  </div>
-                  <div class="roadmap__drageble_item">
-                    <div class="roadmap__drageble_item_number">4</div>
-                    <img
-                      src="./image/roadmap/04.png"
-                      alt=""
-                      data-staroge-image="4"
-                    />
-                  </div>
-                </div>
-                <div class="roadmap__text _hide" data-roadmap-text="1">
-                  <h3 class="roadmap__number">1</h3>
-                  <div class="roadmap__completed">completed</div>
-                  <h2 class="roadmap__text_title">
-                    Beta Launch & Core Features
-                  </h2>
-                  <div class="roadmap__list">
-                    <div class="roadmap__list_item _active">
-                      Design, development and launch of the website
-                    </div>
-                    <div class="roadmap__list_item _active">
-                      Launch in Telegram Mini Apps
-                    </div>
-                    <div class="roadmap__list_item _active">
-                      Core Gameplay Release
-                    </div>
-                    <div class="roadmap__list_item _active">
-                      Crystals & tickets – In-game economy
-                    </div>
-                    <div class="roadmap__list_item _active">
-                      Leaderboard System development
-                    </div>
-                  </div>
-                  <img
-                    src="./image/roadmap__cross.svg"
-                    alt="roadmap__cross"
-                    class="roadmap__cross"
-                  />
-                </div>
-                <div class="roadmap__text _hide" data-roadmap-text="2">
-                  <h3 class="roadmap__number">2</h3>
-                  <h2 class="roadmap__text_title">
-                    Launch and start of a marketing campaign
-                  </h2>
-                  <div class="roadmap__list">
-                    <div class="roadmap__list_item _active">
-                      $BRICK Token Launch
-                    </div>
-                    <div class="roadmap__list_item _active">
-                      Marketing campaigns
-                    </div>
-                    <div class="roadmap__list_item">
-                      Events & Competitions – Seasonal tournaments with prizes
-                    </div>
-                    <div class="roadmap__list_item">
-                      Collaborations with Web3 projects
-                    </div>
-                  </div>
-                  <img
-                    src="./image/roadmap__cross.svg"
-                    alt="roadmap__cross"
-                    class="roadmap__cross"
-                  />
-                </div>
-                <div class="roadmap__text _hide" data-roadmap-text="3">
-                  <h3 class="roadmap__number">3</h3>
-                  <h2 class="roadmap__text_title">NFT and Economy Expansion</h2>
-                  <div class="roadmap__list">
-                    <div class="roadmap__list_item">
-                      Solana Wallet Integration
-                    </div>
-                    <div class="roadmap__list_item">NFT System Launch</div>
-                    <div class="roadmap__list_item">
-                      NFT Marketplace – Trade in-game assets
-                    </div>
-                    <div class="roadmap__list_item">CEX Listings</div>
-                  </div>
-                  <img
-                    src="./image/roadmap__cross.svg"
-                    alt="roadmap__cross"
-                    class="roadmap__cross"
-                  />
-                </div>
-                <div class="roadmap__text _hide" data-roadmap-text="4">
-                  <h3 class="roadmap__number">4</h3>
-                  <h2 class="roadmap__text_title">Scaling & UX Improvements</h2>
-                  <div class="roadmap__list">
-                    <div class="roadmap__list_item">
-                      New Game Modes – Challenges and special tasks
-                    </div>
-                    <div class="roadmap__list_item">
-                      Optimization & New Content – Game balance improvements and
-                      new blocks
-                    </div>
-                    <div class="roadmap__list_item">
-                      PvP & Multiplayer Modes – Players can challenge each other
-                      for rewards
-                    </div>
-                    <div class="roadmap__list_item">
-                      Staking & Passive Rewards – Players can stake $BRICK for
-                      additional earnings
-                    </div>
-                  </div>
-                  <img
-                    src="./image/roadmap__cross.svg"
-                    alt="roadmap__cross"
-                    class="roadmap__cross"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="partners bg__wrap">
-          <img
-            src="./image/partners__title.png"
-            alt=""
-            class="partners__title"
-          />
-          <img
-            src="./image/partners/pink__crystal.svg"
-            class="crystal pink"
-            data-parallax-factor="0.4"
-          />
-          <img
-            src="./image/partners/blue__lightning.svg"
-            class="crystal blue"
-            data-parallax-factor="0.25"
-          />
-          <img
-            src="./image/partners/green__crystal.svg"
-            class="crystal green"
-            data-parallax-factor="0.3"
-          />
-          <img
-            src="./image/partners/orange__crystal.svg"
-            class="crystal orange"
-            data-parallax-factor="0.35"
-          />
-          <img
-            src="./image/partners/small__crystal.svg"
-            class="crystal small"
-            data-parallax-factor="0.2"
-          />
-          <img
-            src="./image/partners/small2__crystal.svg"
-            class="crystal small2"
-            data-parallax-factor="0.15"
-          />
-
-          <div id="partners-physics"></div>
-        </section>
-        <footer>
-          <div class="footer__content _container">
-            <a href="#" class="footer__logo">
-              <img src="./image/logo.svg" alt="" />
-            </a>
-            <div class="footer__cols">
-              <div class="footer__col">
-                <a class="_scale_hover" href="#">About</a>
-                <a class="_scale_hover" href="#">Roadmap</a>
-                <a class="_scale_hover" href="#">Partners</a>
-              </div>
-              <div class="footer__col">
-                <a class="_scale_hover" href="#">Litepaper</a>
-                <a class="_scale_hover" href="privacy-policy.html"
-                  >Privacy Policy</a
-                >
-                <a class="_scale_hover" href="code-of-conduct.html"
-                  >Code of Conduct</a
-                >
-              </div>
-              <div class="footer__col">
-                <a class="_scale_hover" href="#">Dextools</a>
-                <a class="_scale_hover" href="#">DexScreener</a>
-                <a class="_scale_hover" href="#">CoinGecko</a>
-                <a class="_scale_hover" href="#">CoinMarketCap</a>
-              </div>
-            </div>
-            <div class="footer__networks">
-              <h3 class="footer__networks_title">Follow us & Stay tuned!</h3>
-              <div class="networks">
-                <a href="Telegram" class="_scale_hover">
-                  <img src="./image/tg.svg" alt="" />
-                </a>
-                <a href="Twitter" class="_scale_hover">
-                  <img src="./image/x.svg" alt="" />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="_container">
-            <div class="footer__line"></div>
-            <p class="footer__text">© 2025 Brick Blast. All rights reserved</p>
-          </div>
-        </footer>
+               </div>
+               <div class="_container">
+                  <div class="footer__line"></div>
+                  <p class="footer__text">© 2025 Brick Blast. All rights reserved</p>
+               </div>
+            </footer>
+         </div>
       </div>
-    </div>
-    <div class="copied_modal">copied to clipboard</div>
+      <div class="copied_modal">copied to clipboard</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8.0.7/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8.0.7/swiper-bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.7/swiper-bundle.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8.0.7/swiper-bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-    <script src="./js/copy.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/main-classes.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/sub-list.js"></script>
-    <script src="./js/animation.js"></script>
-    <script src="./js/console.js"></script>
-    <script src="./js/roadmap.js"></script>
-  </body>
+      <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+      <script src="./js/copy.js"></script>
+      <script src="./js/main.js"></script>
+      <script src="./js/main-classes.js"></script>
+      <script src="./js/header.js"></script>
+      <script src="./js/sub-list.js"></script>
+      <script src="./js/animation.js"></script>
+      <script src="./js/console.js"></script>
+      <script src="./js/roadmap.js"></script>
+   </body>
 </html>
