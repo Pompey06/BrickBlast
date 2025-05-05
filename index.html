@@ -4,11 +4,33 @@
       <meta charset="UTF-8" />
       <meta name="format-detection" content="telephone=no" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script>
+         (function () {
+            try {
+               const [navEntry] = performance.getEntriesByType("navigation");
+               const navType = navEntry ? navEntry.type : performance.navigation?.type === 1 ? "reload" : "navigate";
+               const shown = sessionStorage.getItem("loaderShown") === "true";
+               const shouldShow = navType === "reload" || !shown;
+               if (!shouldShow) document.documentElement.classList.add("no-loader");
+            } catch (e) {}
+         })();
+      </script>
       <title>Brick Blast</title>
       <link rel="stylesheet" href="./css/style.css" />
       <link rel="shortcut icon" href="./image/favicon.png" type="image/x-icon" />
    </head>
    <body>
+      <div id="page-loader">
+         <img src="./image/left__cloud.svg" class="loader__cloud loader__cloud--left" alt="cloud" />
+         <img src="./image/right__cloud.svg" class="loader__cloud loader__cloud--right" alt="cloud" />
+
+         <img src="./image/purple_cube.svg" class="loader__cube loader__cube--purple" alt="cube" />
+         <img src="./image/blue_cube.svg" class="loader__cube loader__cube--blue" alt="cube" />
+
+         <img src="./image/loader-pc.gif" class="loader__gif loader__gif--pc" alt="Loading…" />
+         <img src="./image/loader.gif" class="loader__gif loader__gif--mobile" alt="Loading…" />
+      </div>
+
       <div class="wrapper bg__wrap">
          <!--<img src="./image/bg.png" alt="" class="bg hide-450" />
          <img src="./image/bgmb.png" alt="" class="bg show-450" />-->
@@ -16,7 +38,7 @@
          <div class="content simple-page">
             <header class="header _fixed">
                <div class="header__container _container">
-                  <a href="" class="header__logo">
+                  <a href="./index.html" class="header__logo">
                      <img src="./image/logo.svg" alt="" />
                   </a>
                   <div class="header__menu menu">
@@ -92,7 +114,39 @@
                   </button>
                </div>
             </header>
-            <section class="info bg__wrap">
+            <section id="info-loader" class="info bg__wrap">
+               <img src="./image/video__preview.png" alt="" class="info__video bg video__preview" />
+               <!--<video src="./image/4.mp4" autoplay muted loop class="info__video bg"></video>-->
+               <img data-anim-on-scroll data-delay="5" src="./image/first__light.svg" alt="" class="first__light" />
+               <img
+                  data-delay="6"
+                  data-anim-on-scroll
+                  src="./image/left__cloud.svg"
+                  alt=""
+                  class="left__cloud _cloud_anim"
+               />
+               <img
+                  data-delay="6"
+                  data-anim-on-scroll
+                  src="./image/right__cloud.svg"
+                  alt=""
+                  class="right__cloud _cloud_anim"
+               />
+               <div class="cube-wrapper" data-parallax-factor="0.2">
+                  <img src="./image/purple_cube.svg" alt="" class="purple_cube" />
+               </div>
+               <div class="cube-wrapper" data-parallax-factor="0.3">
+                  <img src="./image/blue_cube.svg" alt="" class="blue_cube" />
+               </div>
+
+               <div class="info__content">
+                  <img data-delay="5.4" data-anim-on-scroll src="./image/logo.png" alt="" class="title _scale_anim" />
+                  <a data-delay="5.8" data-anim-on-scroll href="#" class="play _left_anim_tr">
+                     <img src="./image/main-play.svg" alt="" class="_scale_hover" />
+                  </a>
+               </div>
+            </section>
+            <section id="info-noloader" class="info bg__wrap">
                <img src="./image/video__preview.png" alt="" class="info__video bg video__preview" />
                <!--<video src="./image/4.mp4" autoplay muted loop class="info__video bg"></video>-->
                <img data-anim-on-scroll src="./image/first__light.svg" alt="" class="first__light" />
@@ -118,8 +172,8 @@
                </div>
 
                <div class="info__content">
-                  <img data-delay="0.4" data-anim-on-scroll src="./image/logo.png" alt="" class="title _scale_anim" />
-                  <a data-delay="0.8" data-anim-on-scroll href="#" class="play _left_anim_tr">
+                  <img data-delay="0.3" data-anim-on-scroll src="./image/logo.png" alt="" class="title _scale_anim" />
+                  <a data-delay="0.3" data-anim-on-scroll href="#" class="play _left_anim_tr">
                      <img src="./image/main-play.svg" alt="" class="_scale_hover" />
                   </a>
                </div>
@@ -521,6 +575,7 @@
       <script src="https://cdn.jsdelivr.net/npm/swiper@8.0.7/swiper-bundle.min.js"></script>
 
       <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+      <script src="./js/loader.js"></script>
       <script src="./js/copy.js"></script>
       <script src="./js/main.js"></script>
       <script src="./js/main-classes.js"></script>

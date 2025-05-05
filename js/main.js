@@ -1,45 +1,3 @@
-window.addEventListener("scroll", function () {
-   const scrollOffset = window.pageYOffset;
-
-   // Обработка cube-wrapper (оставляем как есть)
-   document.querySelectorAll(".cube-wrapper").forEach((wrapper) => {
-      let factor = wrapper.getAttribute("data-parallax-factor");
-      factor = factor ? parseFloat(factor) : 0.2;
-      const parallaxOffset = scrollOffset * factor;
-
-      const img = wrapper.querySelector("img");
-      if (img) {
-         img.style.transform = `translateY(${parallaxOffset}px)`;
-      }
-   });
-
-   // Обработка .crystal
-   document.querySelectorAll(".crystal").forEach((crystal) => {
-      let factor = crystal.getAttribute("data-parallax-factor");
-      factor = factor ? parseFloat(factor) : 0.2;
-      const partners = document.querySelector(".partners");
-      const partnersOffset = partners.offsetTop * 0.5;
-      let parallaxOffset = (scrollOffset - partnersOffset) * factor;
-      parallaxOffset = parallaxOffset > 0 ? parallaxOffset : 0;
-
-      if (scrollOffset - partners.offsetTop < -300) crystal.style.transform = `translateY(${parallaxOffset}px)`;
-   });
-
-   document
-      .querySelectorAll(
-         ".coin1, .coin2, .blue, .green, .purple, .yellow, .blue_circle, .green_circle, .purple_circle, .yellow_circle"
-      )
-      .forEach((el) => {
-         let factor = el.getAttribute("data-parallax-factor");
-         factor = factor ? parseFloat(factor) : 0.2;
-
-         const parallaxOffset = scrollOffset * factor;
-
-         // Смещаем вверх на 300px изначально
-         el.style.transform = `translateY(${parallaxOffset - 300}px)`;
-      });
-});
-
 const Engine = Matter.Engine,
    Render = Matter.Render,
    Runner = Matter.Runner,
@@ -389,18 +347,48 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       observer.observe(logosSection);
    }
+   const mouse = Mouse.create(render.canvas);
+   const mouseConstraint = MouseConstraint.create(engine, {
+      mouse: mouse,
+      constraint: {
+         stiffness: 0.05,
+         render: { visible: false },
+      },
+   });
+   World.add(world, mouseConstraint);
+   render.mouse = mouse;
 });
+// сразу блокируем прокрутку
 
-/**
- * Управление мышью (перетаскивание логотипов)
- */
-const mouse = Mouse.create(render.canvas);
-const mouseConstraint = MouseConstraint.create(engine, {
-   mouse: mouse,
-   constraint: {
-      stiffness: 0.2,
-      render: { visible: false },
-   },
-});
-World.add(world, mouseConstraint);
-render.mouse = mouse;
+function handleParallax() {
+   const scrollY = window.pageYOffset;
+
+   // кубы
+   document.querySelectorAll(".cube-wrapper").forEach((wrapper) => {
+      const factor = parseFloat(wrapper.dataset.parallaxFactor) || 0.2;
+      const img = wrapper.querySelector("img");
+      if (img) img.style.transform = `translateY(${scrollY * factor}px)`;
+   });
+
+   // «кристаллы» внутри секции .partners
+   const partners = document.querySelector(".partners");
+   if (partners) {
+      const partnersTop = partners.getBoundingClientRect().top + scrollY;
+      document.querySelectorAll(".crystal").forEach((crystal) => {
+         const factor = parseFloat(crystal.dataset.parallaxFactor) || 0.2;
+         // смещение от начала секции (не уходим в минус)
+         const delta = Math.max(0, scrollY - partnersTop);
+         crystal.style.transform = `translateY(${delta * factor}px)`;
+      });
+   }
+
+   // монеты и цветные кружки
+   document
+      .querySelectorAll(
+         ".coin1, .coin2, .blue, .green, .purple, .yellow, .blue_circle, .green_circle, .purple_circle, .yellow_circle"
+      )
+      .forEach((el) => {
+         const factor = parseFloat(el.dataset.parallaxFactor) || 0.2;
+         el.style.transform = `translateY(${scrollY * factor - 300}px)`;
+      });
+}

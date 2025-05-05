@@ -181,19 +181,31 @@ html {
    transform: scale(1);
 }
 
+html.no-loader #page-loader {
+   display: none !important;
+}
+
+.hidden {
+   display: none !important;
+}
+
 @keyframes floatCloud {
    0%,
    100% {
       transform: scale(1) translateY(0);
    }
    50% {
-      transform: scale(1) translateY(20px);
+      transform: scale(1) translateY(30px);
    }
 }
 
 .cube-wrapper {
    position: absolute;
-   animation: dropCube 1s ease-out 1.2s both;
+   animation: dropCube 1s ease-out 5.6s both;
+}
+
+#info-noloader .cube-wrapper {
+   animation-delay: 0.6s !important;
 }
 
 .purple_cube {
@@ -379,10 +391,176 @@ html {
    transform: rotate(-38.231deg);
 }
 
+#page-loader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   background-color: #0a4eb8;
+   overflow: hidden;
+   z-index: 9999;
+}
+
+body.loading *:not(#page-loader) {
+   pointer-events: none;
+}
+
+#page-loader::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   backdrop-filter: blur(8px);
+   z-index: 1;
+}
+
+.loader__cloud {
+   position: absolute;
+   width: 250px;
+   opacity: 0.6;
+   filter: brightness(1.2);
+   z-index: 0;
+   animation-fill-mode: both;
+}
+
+.loader__cloud--left {
+   top: 20%;
+   left: 0;
+   animation: cloud-float 12s ease-in-out infinite alternate;
+}
+
+.loader__cloud--right {
+   top: 50%;
+   left: 10%; /* ставим где-то справа, но внутри экрана */
+   animation: cloud-float 11s ease-in-out infinite alternate-reverse;
+}
+
+.loader__cube {
+   position: absolute;
+   width: 180px;
+   opacity: 0.8;
+   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+   z-index: 0;
+   animation-fill-mode: both;
+}
+
+.loader__cube--purple {
+   top: 15%;
+   left: 25%;
+   animation: cube-2d 12s linear infinite;
+   animation-delay: -4s;
+}
+
+.loader__cube--blue {
+   top: 40%;
+   left: 65%;
+   animation: cube-2d 10s linear infinite reverse;
+   animation-delay: -6s;
+}
+
+@keyframes cube-2d {
+   0% {
+      transform: translateY(-10vh) rotate(0deg);
+      opacity: 0.8;
+   }
+   25% {
+      transform: translateY(10vh) rotate(90deg);
+      opacity: 0.9;
+   }
+   50% {
+      transform: translateY(-10vh) rotate(180deg);
+      opacity: 0.8;
+   }
+   75% {
+      transform: translateY(10vh) rotate(270deg);
+      opacity: 0.7;
+   }
+   100% {
+      transform: translateY(-10vh) rotate(360deg);
+      opacity: 0.8;
+   }
+}
+
+#page-loader .loader__gif {
+   max-width: none !important;
+   max-height: none !important;
+}
+
+#page-loader .loader__gif {
+   position: absolute;
+   width: 100%;
+   height: auto;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 2;
+}
+
+@keyframes pulse {
+   0%,
+   100% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(1.05);
+   }
+}
+
+@keyframes cloud-float {
+   0% {
+      transform: translateX(0);
+      opacity: 0.6;
+   }
+   50% {
+      opacity: 0.9;
+   }
+   100% {
+      transform: translateX(80vw);
+      opacity: 0.6;
+   }
+}
+
+#page-loader.hidden {
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.loader__gif--mobile {
+   display: none;
+}
+
+@media (max-width: 1080px) {
+   .loader__gif--pc {
+      display: none;
+   }
+   .loader__gif--mobile {
+      display: block;
+   }
+   .loader__cloud {
+      width: 160px;
+   }
+   .loader__cube {
+      width: 140px;
+   }
+}
+
+@media (max-width: 400px) {
+   .loader__cloud {
+      width: 100px;
+   }
+   .loader__cube {
+      width: 80px;
+   }
+}
+
 #partners-physics {
    width: 100%;
    margin-top: 150px;
-   pointer-events: none;
+   pointer-events: auto;
 }
 
 .partners__title {
