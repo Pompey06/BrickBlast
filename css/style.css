@@ -684,6 +684,10 @@ body.loading *:not(#page-loader) {
    z-index: 0;
 }
 
+.loader__gif {
+   transition: opacity 0.3s ease;
+}
+
 .roadmap {
    position: relative;
    z-index: 1;

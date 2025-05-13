@@ -34,26 +34,13 @@ function finish() {
       sec1.classList.remove("hidden");
       sec2.classList.add("hidden");
 
-      // Устанавливаем delay — строго по тому, что указано в data-delay
-      const delayElements = sec1.querySelectorAll("[data-delay]");
-      delayElements.forEach((el) => {
-         const delay = el.getAttribute("data-delay");
-         el.style.transitionDelay = `${delay}s`;
-         el.style.animationDelay = `${delay}s`;
-      });
-
-      // Сначала убираем _animate, чтобы анимации не стартовали до отрисовки
+      // Сброс и рестарт анимаций — без переписывания delay
       const animItems = sec1.querySelectorAll("[data-anim-on-scroll]");
-      animItems.forEach((el) => {
-         el.classList.remove("_animate");
-      });
+      animItems.forEach((el) => el.classList.remove("_animate"));
 
-      // Ждём два animation frame, чтобы анимации не мигали
       requestAnimationFrame(() => {
          requestAnimationFrame(() => {
-            animItems.forEach((el) => {
-               el.classList.add("_animate");
-            });
+            animItems.forEach((el) => el.classList.add("_animate"));
          });
       });
    } else {
@@ -87,28 +74,21 @@ if (!shouldShow) {
       if (gif && gif.tagName === "IMG") {
          let finished = false;
 
-         // Прячем до загрузки
-         gif.style.opacity = "0";
+         // Показываем сразу, как только начинаем загружать
+         gif.style.opacity = "1";
 
-         const clone = new Image();
-         clone.src = gif.src;
-
-         clone.onload = () => {
-            gif.style.opacity = "1";
-
-            setTimeout(() => {
-               if (!finished) {
-                  finished = true;
-                  finish();
-               }
-            }, 5500); // длительность анимации GIF
-         };
-
-         // Fallback если не загрузилось — максимум 10 сек
+         // Запускаем finish через 5.5 секунд — независимо от загрузки гифки
          setTimeout(() => {
             if (!finished) {
                finished = true;
-               gif.style.opacity = "1";
+               finish();
+            }
+         }, 5500);
+
+         // Fallback: если гифка вообще не грузится, все равно заканчиваем максимум через 10 сек
+         setTimeout(() => {
+            if (!finished) {
+               finished = true;
                finish();
             }
          }, 10000);
