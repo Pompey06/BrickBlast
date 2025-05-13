@@ -1,17 +1,32 @@
-const swiperInstance = new Swiper(".console__swiper", {
-   navigation: {
-      nextEl: ".swiper__next",
-      prevEl: ".swiper__prev",
-   },
-   on: {
-      init: function () {
-         updateNavigationArrows(this);
+//const swiperInstance = new Swiper(".console__swiper", {
+//   navigation: {
+//      nextEl: ".swiper__next",
+//      prevEl: ".swiper__prev",
+//   },
+//   on: {
+//      init: function () {
+//         updateNavigationArrows(this);
+//      },
+//      slideChange: function () {
+//         updateNavigationArrows(this);
+//      },
+//   },
+//});
+
+let swiperInstance;
+
+function initSwiper() {
+   swiperInstance = new Swiper(".console__swiper", {
+      navigation: {
+         nextEl: ".swiper__next",
+         prevEl: ".swiper__prev",
       },
-      slideChange: function () {
-         updateNavigationArrows(this);
+      on: {
+         init: (swiper) => updateNavigationArrows(swiper),
+         slideChange: (swiper) => updateNavigationArrows(swiper),
       },
-   },
-});
+   });
+}
 
 function updateNavigationArrows(swiper) {
    const prevEl = document.querySelector(".swiper__prev");

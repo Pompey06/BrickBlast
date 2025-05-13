@@ -57,6 +57,7 @@ if (!shouldShow) {
    loader.classList.add("hidden");
    sec1.classList.add("hidden");
    sec2.classList.remove("hidden");
+   initSwiper();
    document.documentElement.classList.add("loaded");
    document.body.classList.add("loaded");
    handleParallax();
