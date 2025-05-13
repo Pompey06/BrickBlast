@@ -1433,6 +1433,7 @@ body.loading *:not(#page-loader) {
 
 .console {
    position: relative;
+   z-index: 10;
    --console-scale: 1; /* по умолчанию */
    transform: scale(var(--console-scale)) rotate(-2.231deg) translateY(var(--console-translateY, -600px));
    opacity: 0;

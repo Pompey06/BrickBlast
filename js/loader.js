@@ -4,7 +4,7 @@
 let navType = "navigate";
 const [navEntry] = performance.getEntriesByType("navigation");
 if (navEntry) {
-   navType = navEntry.type; // "navigate" | "reload" | "back_forward"
+   navType = navEntry.type;
 } else if (performance.navigation) {
    const t = performance.navigation.type;
    if (t === performance.navigation.TYPE_RELOAD) navType = "reload";
@@ -33,6 +33,29 @@ function finish() {
    if (shouldShow) {
       sec1.classList.remove("hidden");
       sec2.classList.add("hidden");
+
+      // Устанавливаем delay — строго по тому, что указано в data-delay
+      const delayElements = sec1.querySelectorAll("[data-delay]");
+      delayElements.forEach((el) => {
+         const delay = el.getAttribute("data-delay");
+         el.style.transitionDelay = `${delay}s`;
+         el.style.animationDelay = `${delay}s`;
+      });
+
+      // Сначала убираем _animate, чтобы анимации не стартовали до отрисовки
+      const animItems = sec1.querySelectorAll("[data-anim-on-scroll]");
+      animItems.forEach((el) => {
+         el.classList.remove("_animate");
+      });
+
+      // Ждём два animation frame, чтобы анимации не мигали
+      requestAnimationFrame(() => {
+         requestAnimationFrame(() => {
+            animItems.forEach((el) => {
+               el.classList.add("_animate");
+            });
+         });
+      });
    } else {
       sec1.classList.add("hidden");
       sec2.classList.remove("hidden");
@@ -44,7 +67,6 @@ function finish() {
 
 // 6. Сразу скрываем или показываем loader до любой отрисовки
 if (!shouldShow) {
-   // без лоудера — сразу скрыть и показать нужную секцию
    loader.classList.add("hidden");
    sec1.classList.add("hidden");
    sec2.classList.remove("hidden");
@@ -53,16 +75,45 @@ if (!shouldShow) {
    handleParallax();
    window.addEventListener("scroll", handleParallax);
 } else {
-   // с лоудером — блокируем скролл сразу
    sessionStorage.setItem("loaderShown", "true");
    document.documentElement.classList.add("loading");
    document.body.classList.add("loading");
    sec1.classList.remove("hidden");
    sec2.classList.add("hidden");
 
-   // по load показываем секцию и скрываем loader через delay
    window.addEventListener("load", () => {
-      const delay = window.innerWidth <= 1080 ? 4000 : 5000;
-      setTimeout(finish, delay);
+      const gif = document.querySelector(".loader__gif--pc") || document.querySelector(".loader__gif--mobile");
+
+      if (gif && gif.tagName === "IMG") {
+         let finished = false;
+
+         // Прячем до загрузки
+         gif.style.opacity = "0";
+
+         const clone = new Image();
+         clone.src = gif.src;
+
+         clone.onload = () => {
+            gif.style.opacity = "1";
+
+            setTimeout(() => {
+               if (!finished) {
+                  finished = true;
+                  finish();
+               }
+            }, 5500); // длительность анимации GIF
+         };
+
+         // Fallback если не загрузилось — максимум 10 сек
+         setTimeout(() => {
+            if (!finished) {
+               finished = true;
+               gif.style.opacity = "1";
+               finish();
+            }
+         }, 10000);
+      } else {
+         setTimeout(finish, 5500);
+      }
    });
 }
