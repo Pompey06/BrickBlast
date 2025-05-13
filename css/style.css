@@ -1431,6 +1431,15 @@ body.loading *:not(#page-loader) {
    margin-top: -50px;
 }
 
+.dpad__button,
+.swiper__prev,
+.swiper__next {
+   touch-action: none;
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   user-select: none;
+}
+
 .console {
    position: relative;
    z-index: 10;

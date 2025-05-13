@@ -98,18 +98,23 @@ function initConsole() {
 }
 
 function onPressWithRelease(el, onPressCallback, onReleaseCallback) {
-   el.addEventListener("pointerdown", (e) => {
+   const press = (e) => {
       e.preventDefault();
       onPressCallback();
-   });
+   };
 
-   el.addEventListener("pointerup", () => {
+   const release = () => {
       onReleaseCallback();
-   });
+   };
 
-   el.addEventListener("pointercancel", () => {
-      onReleaseCallback();
-   });
+   // Основные
+   el.addEventListener("pointerdown", press);
+   el.addEventListener("pointerup", release);
+   el.addEventListener("pointercancel", release);
+
+   // Fallback для iOS
+   el.addEventListener("touchstart", press, { passive: false });
+   el.addEventListener("touchend", release);
 }
 
 function showStartScreen() {
