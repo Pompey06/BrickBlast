@@ -98,17 +98,23 @@ function initConsole() {
 }
 
 function onPressWithRelease(el, onPressCallback, onReleaseCallback) {
+   let isPressed = false;
+
    const press = (e) => {
+      if (isPressed) return;
+      isPressed = true;
       e.preventDefault();
       onPressCallback();
    };
 
    const release = () => {
+      if (!isPressed) return;
+      isPressed = false;
       onReleaseCallback();
    };
 
-   // Основные
-   el.addEventListener("pointerdown", press);
+   // Основные события
+   el.addEventListener("pointerdown", press, { passive: false });
    el.addEventListener("pointerup", release);
    el.addEventListener("pointercancel", release);
 

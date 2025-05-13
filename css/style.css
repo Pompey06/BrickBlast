@@ -686,7 +686,7 @@ body.loading *:not(#page-loader) {
 
 .roadmap {
    position: relative;
-   z-index: 2;
+   z-index: 1;
 }
 
 /* swiper */
@@ -926,6 +926,11 @@ body.loading *:not(#page-loader) {
    font-weight: 500;
    line-height: 120%; /* 19.2px */
    max-width: 124px;
+}
+
+.coin1,
+.coin2 {
+   z-index: 1;
 }
 
 @media (max-width: 1600px) {
@@ -1442,7 +1447,7 @@ body.loading *:not(#page-loader) {
 
 .console {
    position: relative;
-   z-index: 10;
+   z-index: 2;
    --console-scale: 1; /* по умолчанию */
    transform: scale(var(--console-scale)) rotate(-2.231deg) translateY(var(--console-translateY, -600px));
    opacity: 0;
