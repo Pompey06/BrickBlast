@@ -182,9 +182,9 @@ function onPressB() {
    }
 }
 
-initDradBtns();
-initBtns();
-initConsole();
+//initDradBtns();
+//initBtns();
+//initConsole();
 //showSwiperScreen();
 
 document.querySelectorAll("[data-console-last]").forEach((block) => {

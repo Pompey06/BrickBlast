@@ -33,6 +33,10 @@ function finish() {
    if (shouldShow) {
       sec1.classList.remove("hidden");
       sec2.classList.add("hidden");
+      initSwiper();
+      initDradBtns();
+      initBtns();
+      initConsole();
 
       // Сброс и рестарт анимаций — без переписывания delay
       const animItems = sec1.querySelectorAll("[data-anim-on-scroll]");
@@ -57,7 +61,6 @@ if (!shouldShow) {
    loader.classList.add("hidden");
    sec1.classList.add("hidden");
    sec2.classList.remove("hidden");
-   initSwiper();
    document.documentElement.classList.add("loaded");
    document.body.classList.add("loaded");
    handleParallax();
