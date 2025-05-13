@@ -69,7 +69,7 @@ function initDradBtns() {
       () => {
          if (!isStartConsole()) {
             dpad.classList.add("_next");
-            swiperNext.click();
+            swiperInstance.slideNext();
             showSwiperScreen();
          }
       },
@@ -83,7 +83,7 @@ function initDradBtns() {
       () => {
          if (!isStartConsole()) {
             dpad.classList.add("_prev");
-            swiperPrev.click();
+            swiperInstance.slidePrev();
             showSwiperScreen();
          }
       },
@@ -98,21 +98,16 @@ function initConsole() {
 }
 
 function onPressWithRelease(el, onPressCallback, onReleaseCallback) {
-   // press
-   el.addEventListener("touchstart", () => {
+   el.addEventListener("pointerdown", (e) => {
+      e.preventDefault();
       onPressCallback();
    });
 
-   el.addEventListener("mousedown", () => {
-      onPressCallback();
-   });
-
-   // release
-   el.addEventListener("touchend", () => {
+   el.addEventListener("pointerup", () => {
       onReleaseCallback();
    });
 
-   el.addEventListener("mouseup", () => {
+   el.addEventListener("pointercancel", () => {
       onReleaseCallback();
    });
 }
